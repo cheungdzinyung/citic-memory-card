@@ -7,7 +7,9 @@ $card-border-radius: 15px;
 	}
 }
 
-.card-container, .card, .card .side {
+.card-container,
+.card,
+.card .side {
 	width: 100%;
 	height: 100%;
 }
@@ -18,9 +20,10 @@ $card-border-radius: 15px;
 .card {
 	@include border-radius($card-border-radius);
 	position: relative;
-	transition: transform .8s, box-shadow $animation-duration, border-color $animation-duration;
+	transition: transform 0.8s, box-shadow $animation-duration,
+		border-color $animation-duration;
 	transform-style: preserve-3d;
-	box-shadow: 0 0 3px rgba(black, .15);
+	box-shadow: 0 0 3px rgba(black, 0.15);
 	border: 2px solid #bababa;
 
 	.side {
@@ -30,6 +33,7 @@ $card-border-radius: 15px;
 	}
 	.front {
 	}
+
 	.back {
 		transform: rotateY(180deg);
 		position: absolute;
@@ -38,7 +42,8 @@ $card-border-radius: 15px;
 		right: 0;
 		bottom: 0;
 		background-size: 56px 56px;
-		&::before, &::after {
+		&::before,
+		&::after {
 			@include border-radius($card-border-radius - 2);
 			content: "";
 			position: absolute;
@@ -46,8 +51,10 @@ $card-border-radius: 15px;
 			bottom: 0;
 			left: 0;
 			right: 0;
-			background: linear-gradient(#20E4A4, #2CC9CC);
-			opacity: .8;
+			// background: linear-gradient(#20E4A4, #2CC9CC);
+			background-color: #ef5f3b;
+			opacity: 1;
+			border: 20px solid white;
 		}
 		&::after {
 			opacity: 0;
@@ -57,10 +64,10 @@ $card-border-radius: 15px;
 }
 .card-container:hover .card {
 	border: 2px solid $accent-color;
-	box-shadow: 0 0 10px rgba($accent-color, .6);
+	box-shadow: 0 0 10px rgba($accent-color, 0.6);
 
 	.back::after {
-		opacity: .5;
+		opacity: 0.5;
 	}
 }
 .card-container:hover .card.flipped {

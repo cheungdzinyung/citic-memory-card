@@ -32759,6 +32759,11 @@ function Game(_ref) {
       secondCard = _useState8[0],
       setSecondCard = _useState8[1];
 
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),
+      _useState10 = _slicedToArray(_useState9, 2),
+      score = _useState10[0],
+      setScore = _useState10[1];
+
   function setCardIsFlipped(cardID, isFlipped) {
     setCards(function (prev) {
       return prev.map(function (c) {
@@ -32828,6 +32833,7 @@ function Game(_ref) {
 
   function onSuccessGuess() {
     console.log("suc");
+    setScore(score + 1);
     setCardCanFlip(firstCard.id, false);
     setCardCanFlip(secondCard.id, false);
     setCardIsFlipped(firstCard.id, false);
@@ -32867,14 +32873,14 @@ function Game(_ref) {
     className: "game container-md"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "cards-container"
-  }, cards.map(function (card) {
+  }, score <= 3 ? cards.map(function (card) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card_Card__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({
       onClick: function onClick() {
         return onCardClick(card);
       },
       key: card.id
     }, card));
-  })));
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "end")));
 }
 
 /***/ }),
@@ -32971,4 +32977,4 @@ if (content.locals) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.main.fd0862acbea2ac9191d6.js.map
+//# sourceMappingURL=bundle.main.d7a91680b18767b1ee9b.js.map

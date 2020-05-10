@@ -23,6 +23,7 @@ export default function Game({ fieldWidth = 3, fieldHeight = 6 }) {
 	const [canFlip, setCanFlip] = useState(false);
 	const [firstCard, setFirstCard] = useState(null);
 	const [secondCard, setSecondCard] = useState(null);
+	const [score, setScore] = useState(0);
 
 	function setCardIsFlipped(cardID, isFlipped) {
 		setCards(prev =>
@@ -62,6 +63,7 @@ export default function Game({ fieldWidth = 3, fieldHeight = 6 }) {
 
 	function onSuccessGuess() {
 		console.log("suc");
+		setScore(score + 1);
 		setCardCanFlip(firstCard.id, false);
 		setCardCanFlip(secondCard.id, false);
 		setCardIsFlipped(firstCard.id, false);
@@ -89,7 +91,7 @@ export default function Game({ fieldWidth = 3, fieldHeight = 6 }) {
 		console.log("1", firstCard.imageURL.substring(21, 23));
 		console.log("2", secondCard.imageURL.substring(21, 23));
 		firstCard.imageURL.substring(21, 23) ===
-		secondCard.imageURL.substring(21, 23)
+			secondCard.imageURL.substring(21, 23)
 			? onSuccessGuess()
 			: onFailureGuess();
 	}, [firstCard, secondCard]);
@@ -112,13 +114,17 @@ export default function Game({ fieldWidth = 3, fieldHeight = 6 }) {
 	return (
 		<div className="game container-md">
 			<div className="cards-container">
-				{cards.map(card => (
-					<Card
-						onClick={() => onCardClick(card)}
-						key={card.id}
-						{...card}
-					/>
-				))}
+				{score <= 3 ?
+					cards.map(card => (
+						<Card
+							onClick={() => onCardClick(card)}
+							key={card.id}
+							{...card}
+						/>
+					))
+					:
+					<div>end game</div>
+				}
 			</div>
 		</div>
 	);

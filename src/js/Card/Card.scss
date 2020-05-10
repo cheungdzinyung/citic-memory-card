@@ -52,7 +52,9 @@ $card-border-radius: 15px;
 			left: 0;
 			right: 0;
 			// background: linear-gradient(#20E4A4, #2CC9CC);
-			background-color: #ef5f3b;
+			background-image: url("/static/images/card_back.jpeg");
+			// background-color: #ef5f3b;
+
 			opacity: 1;
 			border: 20px solid white;
 		}

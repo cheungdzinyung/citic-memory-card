@@ -8,12 +8,16 @@
 }
 // OH god...
 .game .cards-container {
-	width: calc(100vw - ($spacer * 12));
-	height: calc(100vh - ($spacer * 12));
-	margin: $spacer * 6;
+	// width: calc(100vw - ($spacer * 12));
+	// height: calc(100vh - ($spacer * 12));
+	width: 100vw;
+	height: calc(88vh - 200px);
+	// margin: $spacer * 6;
 	display: grid;
-	grid-template-columns: repeat(4, auto);
-	grid-template-rows: repeat(2, 1fr);
+	// grid-template-columns: repeat(4, auto);
+	// grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(6, auto);
+	grid-template-rows: repeat(1, 1fr);
 	grid-gap: $spacer;
 
 	// @media screen and (max-width: 450px) and (min-height: 650px) {

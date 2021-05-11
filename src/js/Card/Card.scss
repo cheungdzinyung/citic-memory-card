@@ -11,7 +11,8 @@ $card-border-radius: 15px;
 .card,
 .card .side {
 	width: 100%;
-	height: 100%;
+	// height: 100%;
+	height: auto;
 }
 .card-container {
 	cursor: pointer;

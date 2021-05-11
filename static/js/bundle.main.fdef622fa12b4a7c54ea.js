@@ -32882,7 +32882,7 @@ function Game(_ref) {
       },
       key: card.id
     }, card));
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "end")));
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "end game")));
 }
 
 /***/ }),
@@ -32979,8 +32979,4 @@ if (content.locals) {
 /***/ })
 
 /******/ });
-<<<<<<< HEAD:static/js/bundle.main.3d91ca70ab29a3ee8335.js
-//# sourceMappingURL=bundle.main.3d91ca70ab29a3ee8335.js.map
-=======
-//# sourceMappingURL=bundle.main.d7a91680b18767b1ee9b.js.map
->>>>>>> 128193f52a051bf463912f58a943a0a203411ebf:static/js/bundle.main.d7a91680b18767b1ee9b.js
+//# sourceMappingURL=bundle.main.fdef622fa12b4a7c54ea.js.map

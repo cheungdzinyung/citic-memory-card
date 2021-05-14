@@ -25,7 +25,7 @@ $card-border-radius: 15px;
 		border-color $animation-duration;
 	transform-style: preserve-3d;
 	box-shadow: 0 0 3px rgba(black, 0.15);
-	border: 2px solid #052F61;
+	border: 2px solid #96CCBD;
 
 	.side {
 		-webkit-backface-visibility: hidden;
@@ -60,7 +60,7 @@ $card-border-radius: 15px;
 			// background-color: #ef5f3b;
 
 			opacity: 1;
-			border: 10px solid #052F61;
+			border: 10px solid #96CCBD;
 		}
 		&::after {
 			opacity: 0;
